@@ -207,7 +207,6 @@ class ItemController extends CI_Controller{
 
     public function updateItemAct($id){
 
-
         $this->form_validation->set_rules("title_az", "TITLE AZ", "required|trim");
         $this->form_validation->set_rules("descr_az", "DESCRIPTION AZ", "required|trim");
         $this->form_validation->set_rules("date", "DATE", "required|trim");
@@ -254,8 +253,6 @@ class ItemController extends CI_Controller{
                 'category'       => $category,
                 'img'            => "",
                 'status'         => $status,
-//                'creater_id'     => $_SESSION['admin_id'],
-//                'creat_date'     => date("Y-m-d H:i:s"),
                 'updater_id'     => $_SESSION['admin_id'],
                 'update_date'    => date("Y-m-d H:i:s"),
             ];
@@ -296,58 +293,21 @@ class ItemController extends CI_Controller{
             $this->load->view("{$viewData->rootFolder}/{$viewData->viewFolder}/{$viewData->subViewFolder}/create",$viewData);
 
         }
-//        die();
-//        $title_az   = $_POST['title_az'];
-//        $descr_az   = $_POST['descr_az'];
-//
-//        $title_en   = $_POST['title_en'];
-//        $descr_en   = $_POST['descr_en'];
-//
-//        $title_ru   = $_POST['title_ru'];
-//        $descr_ru   = $_POST['descr_ru'];
-//
-//        $title_tr   = $_POST['title_tr'];
-//        $descr_tr   = $_POST['descr_tr'];
-//
-//        $date       = $_POST['date'];
-//        $category   = $_POST['category'];
-//        $status     = $_POST['status'];
-//
-//        if(!empty($title_az) && !empty($descr_az) && !empty($date) && !empty($category) && !empty($status)){
-//
-//            $data = [
-//                'title'          => $title_az,
-//                'title_en'       => $title_en,
-//                'title_ru'       => $title_ru,
-//                'title_tr'       => $title_tr,
-//
-//                'description'    => $descr_az,
-//                'description_en' => $descr_en,
-//                'description_ru' => $descr_ru,
-//                'description_tr' => $descr_tr,
-//
-//                'date'           => $date,
-//                'status'         => $status,
-//                'category'       => $category,
-//                'creater_id'     => $_SESSION['admin_id'],
-//                'creat_date'     => date("Y-m-d H:i:s"),
-//
-//            ];
-//
-//            $data = $this->security->xss_clean($data);
-//            print_r('<pre>');
-//            print_r($data);
-//
-//        }else{
-//            $this->session->set_flashdata('err', 'Diqqət! Boşluq buraxmayın!');
-//            redirect($_SERVER['HTTP_REFERER']);
-//
-//        }
-//
 
+    }
 
+    public function delete($id)
+    {
 
+        if(isset($_SESSION['admin_id']) && isset($_SESSION['admin_status']) && isset($_SESSION['admin_category'])){
 
+            $this->item_model->delete(array("id" => $id,));
+            redirect(base_url('admin_item_list'));
+
+        }else{
+            redirect(base_url('admin_login'));
+            exit();
+        }
 
     }
 

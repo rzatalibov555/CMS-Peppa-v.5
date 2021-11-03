@@ -85,10 +85,11 @@ $route['admin_creatAdminAct'] 	= 'AdminController/creatAdminAct';
 
 
 
-$route['admin_item_list']	 = 'ItemController/index';
-$route['admin_create_item']	 = 'ItemController/createItem';
-$route['admin_create_item_act'] = 'ItemController/createItemAct';
-$route['admin_update_form/(.*)'] = 'ItemController/update_form/$1';
-$route['admin_updateItemAct/(.*)'] = 'ItemController/updateItemAct/$1';
+$route['admin_item_list']	        = 'ItemController/index';
+$route['admin_create_item']	        = 'ItemController/createItem';
+$route['admin_create_item_act']     = 'ItemController/createItemAct';
+$route['admin_update_form/(.*)']    = 'ItemController/update_form/$1';
+$route['admin_updateItemAct/(.*)']  = 'ItemController/updateItemAct/$1';
+$route['admin_deleteItem/(.*)']     = 'ItemController/delete/$1';
 			// Admin end
 
