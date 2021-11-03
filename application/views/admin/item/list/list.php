@@ -135,7 +135,9 @@
                                 <td class="text-center">
 
                                     <button type="button" id="PopoverCustomT-1" class="btn btn-outline-primary">Details</button>
-                                    <button class="btn-wide btn btn-outline-warning">Edit</button>
+                                    <a href="<?php echo base_url('admin_update_form/'.$item->id); ?>">
+                                        <button class="btn-wide btn btn-outline-warning">Edit</button>
+                                    </a>
                                     <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger"><i class="pe-7s-trash btn-icon-wrapper"> </i></button>
                                 </td>
                             </tr>

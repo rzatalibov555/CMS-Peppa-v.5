@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 02, 2021 at 02:16 PM
+-- Generation Time: Nov 03, 2021 at 01:56 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.18
 
@@ -104,14 +104,15 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`id`, `url`, `title`, `title_en`, `title_ru`, `title_tr`, `description`, `description_en`, `description_ru`, `description_tr`, `rank`, `date`, `category`, `img`, `status`, `creater_id`, `creat_date`, `updater_id`, `update_date`) VALUES
-(1, 'apple', 'apple store', '', '', '', 'It is a apple store', NULL, NULL, NULL, '1', NULL, NULL, '', '1', 5, '11', 11, '11'),
+(1, 'apple', 'qqq', '', '', '', '<p>It is a apple storeddd1</p>', '', '', '', '1', '2021-11-03', '1', '', '2', 5, '11', 21, '2021-11-03 13:53:55'),
 (2, 'apple1', 'apple store1', '', '', '', 'It is a apple store1', NULL, NULL, NULL, '1', NULL, NULL, '', '0', 5, '12', 12, '12'),
 (3, 'apple3', 'apple store3', '', '', '', 'It is a apple store3', NULL, NULL, NULL, '1', NULL, NULL, '', '1', 5, '13', 13, '13'),
 (4, NULL, '1', '', '', '', '<p>2</p>', '', '', '', NULL, '2021-11-02', '1', '', '2', 21, '2021-11-02 12:53:01', NULL, NULL),
 (5, NULL, '1', '', '', '', '<p>sadsd</p>', '', '', '', NULL, '2021-11-02', '1', '', '2', 21, '2021-11-02 12:53:08', NULL, NULL),
-(6, NULL, 'sadsad1', '', '', '', '<p>saddsfdfsd2</p>', '', '', '', NULL, '2021-12-03', '1', '', '1', 21, '2021-11-02 12:54:00', NULL, NULL),
+(6, NULL, 'qwerty1', '', '', '', '<p>saddsfdfsd2</p>', '', '', '', NULL, '2021-12-03', '1', '', '1', 21, '2021-11-02 12:54:00', 21, '2021-11-03 13:54:22'),
 (7, NULL, 'asd', '', '', '', '<p>asd</p>', '', '', '', NULL, '2021-11-25', '1', '', '2', 21, '2021-11-02 12:59:31', NULL, NULL),
-(8, NULL, '1234', '', '', '', '<p>asdfgh</p>', '', '', '', NULL, '2021-12-01', '1', '', '1', 21, '2021-11-02 14:13:36', NULL, NULL);
+(8, NULL, '1234', '', '', '', '<p>asdfgh</p>', '', '', '', NULL, '2021-12-01', '1', '', '1', 21, '2021-11-02 14:13:36', NULL, NULL),
+(9, NULL, 'azzzz', 'ennnn', 'ruuuuu', 'trrrrr', '<p>aaaaaa</p>', '<p>eeeee</p>', '<p>rrrrrrr</p>', '<p>tttttttt</p>', NULL, '2021-11-04', '2', '', '1', 21, '2021-11-03 13:22:09', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -231,7 +232,7 @@ ALTER TABLE `admincategory`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `item_category`
